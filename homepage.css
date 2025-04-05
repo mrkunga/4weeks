@@ -1,0 +1,16 @@
+.top {
+	color: blueviolet;
+}
+.nav {
+	margin-block: 10px;
+}
+.top {
+	height: 30px;
+}
+.head {
+	height: 10px;
+	align: center;
+}
+.bottom {
+	align: bottom;
+}
