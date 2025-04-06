@@ -17,5 +17,46 @@
 			<p onclick="window.location.href = 'suggestions.html'" class="nav"onmouseover="this.style = 'color: darkviolet;'" onmouseout="this.style = 'color: ghostwhite;'">suggestion box</p>
 			<p onclick="window.location.href = 'tipjar.html'" class="nav"onmouseover="this.style = 'color: darkviolet;'" onmouseout="this.style = 'color: ghostwhite;'">tipjar</p>
 	</div>
+	<div class="mid">
+		<div class="column">
+			<br>
+			<h2>upcoming events:</h2>
+			<p>to view the details of any event you're interested in, click the name.</p>
+			<div id="card" class="card">
+				<h5 onclick='flip()'>name</h5>
+				<p id="content">date</p>
+				<script>
+					var tar = false;
+					function flip() {
+						document.getElementById("card").style.animation = "turnaround 1s";
+						setTimeout(arm, 1000);
+						setTimeout(tchange, 400);
+					}
+					function tchange() {
+						if (tar) {
+							document.getElementById("content").innerHTML = "date";
+							tar = false;
+						} else {
+							document.getElementById("content").innerHTML = "location 'n stuff";
+							tar = true;
+						}
+					}
+					function arm() {
+						document.getElementById("card").style.animation = "idle";
+					}
+				</script>
+			</div>
+			<br>
+			<h2>We hope to see you soon! &#9786</h2>
+			<img src="media/voorbeeld.jpg" class="voorbeeld"></img>
+		</div>
+	</div>
+	<div id="bottom" class="bottom">
+		<div id="contact" class="contact">
+			<h2>contact</h2>
+			<div class="bot-col"><h4>Manager: Sil</h4><p>email: <a href="mailto:silverheijen@outlook.com">silverheijen@outlook.com</a><p>whatsapp: <a href="https://api.whatsapp.com/send?phone=0630475637">+31630475637</a></p></div> 
+			<div class="bot-col"><h4>Website: Sid</h4><p>email: <a href="mailto:voorsid@gmail.com">voorsid@gmail.com</a></p><p>whatsapp: <a href="https://api.whatsapp.com/send?phone=0639418934">+31639418934</a></p></div>
+		</div>
+	</div>
 </body>
 </html>
