@@ -22,29 +22,39 @@
 			<br>
 			<h2>upcoming events:</h2>
 			<p>to view the details of any event you're interested in, click the name.</p>
-			<div id="card" class="card">
-				<h5 onclick='flip()'>name</h5>
-				<p id="content">date</p>
-				<script>
-					var tar = false;
-					function flip() {
-						document.getElementById("card").style.animation = "turnaround 1s";
-						setTimeout(arm, 1000);
-						setTimeout(tchange, 400);
+			<script>
+					var tar = ['placeholder'];
+					function flip(i) {
+						document.getElementById("card" + i).style.animation = "turnaround 1s";
+						setTimeout(arm, 1000, i);
+						setTimeout(tchange, 400, i);
 					}
-					function tchange() {
-						if (tar) {
-							document.getElementById("content").innerHTML = "date";
-							tar = false;
+					function tchange(i) {
+						if (tar[i]) {
+							document.getElementById("content" + i).innerHTML = "date";
+							tar[i] = false;
 						} else {
-							document.getElementById("content").innerHTML = "location 'n stuff";
-							tar = true;
+							document.getElementById("content" + i).innerHTML = "location 'n stuff";
+							tar[i] = true;
 						}
 					}
-					function arm() {
-						document.getElementById("card").style.animation = "idle";
+					function arm(i) {
+						document.getElementById("card" + i).style.animation = "idle";
 					}
 				</script>
+			<div id="card1" class="card">
+				<h5 onclick='flip(1)'>name</h5>
+				<p id="content1">date</p>
+			</div>
+			<br>
+			<div id="card2" class="card">
+				<h5 onclick='flip(2)'>name</h5>
+				<p id="content2">date</p>
+			</div>
+			<br>
+			<div id="card3" class="card">
+				<h5 onclick='flip(3)'>name</h5>
+				<p id="content3">date</p>
 			</div>
 			<br>
 			<h2>We hope to see you soon! &#9786</h2>
