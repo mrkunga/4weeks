@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -19,10 +18,16 @@
 			<p onclick="window.location.href = 'schedule.html'" class="nav"onmouseover="this.style = 'color: darkviolet;'" onmouseout="this.style = 'color: ghostwhite;'">schedule</p> 
 	</div>
 	<div class="mid">
-		<script async src="https://js.stripe.com/v3/buy-button.js"></script>
-		<stripe-buy-button  buy-button-id="buy_btn_1RC44UAeew8NXtvuAU5mTzPy"  publishable-key="pk_live_51RC23NAeew8NXtvuZutY0R0cTEwMhCJVXAXhx0LWOAfwbHw6x7ZqTpvM7NHwP8RIMmmhyzJItaMAlfIAT0eSYgaL00jNDxyWrZ">
-		</stripe-buy-button>	
-	</div>
+		<div class="column">
+			<br>
+			<h3>Tipjar &#9786</h3>
+			<p>Welcome at our tipjar! Tipping is of course completely optional, but would be very appreciated! :)</p>
+			<script async src="https://js.stripe.com/v3/buy-button.js"></script>
+			<stripe-buy-button  buy-button-id="buy_btn_1RC44UAeew8NXtvuAU5mTzPy"  publishable-key="pk_live_51RC23NAeew8NXtvuZutY0R0cTEwMhCJVXAXhx0LWOAfwbHw6x7ZqTpvM7NHwP8RIMmmhyzJItaMAlfIAT0eSYgaL00jNDxyWrZ"></stripe-buy-button>
+			<h3>Thanks!</h3>
+			<img src="media/goodbye.jpg" class="voorbeeld"></img>
+		</div>
+	</div>	
 	<div id="bottom" class="bottom">
 		<div id="contact" class="contact">
 			<h2>contact</h2>
