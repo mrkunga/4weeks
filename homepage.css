@@ -70,6 +70,7 @@ h2 {
 }
 @keyframes idle { 100% {}}
 .fbd {
+	background-image: url(media/paper.png);
 	visibility: hidden;
 	width: 350px;
 	height: 410px;
