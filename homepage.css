@@ -69,6 +69,45 @@ h2 {
 	100% {	transform: rotateY(0deg);	}
 }
 @keyframes idle { 100% {}}
+.fbd {
+	background-image: url(media/paper.png);
+	visibility: hidden;
+	width: 350px;
+	height: 410px;
+	margin: auto;
+}
+.greeting {
+	padding-top: 84px;
+	font-family: "Sofia";
+	margin-bottom: 12px;
+}
+.ssi {
+	margin-top: 0px;
+	visibility: hidden;
+}
+.fbi {
+	margin-top: 13px;
+	visibility: hidden;
+	margin-left: 12%;
+	line-height: 17px;
+}
+.ending {
+	font-family: "Sofia";
+	margin-top: 0px;
+	margin-bottom: 0px;
+	width: 20px;
+	margin-left: 70%;
+	margin-right: auto;
+	height: 20px;
+}
+.sender {
+	margin-top: 0px;
+	width: 70px;
+}
+.submit {
+	margin-top: 35px;
+	margin-left: 62%;
+}
 .bottom {
 	vertical-align: bottom;
 	align: bottom;

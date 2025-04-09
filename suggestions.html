@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>4Weeks - Suggestion box</title>
 	<link rel="stylesheet" type="text/css" href="homepage.css"></link>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia"></link>
 </head>
 <body>
 	<div id="header" class="header">
@@ -16,6 +17,49 @@
 			<p onclick="window.location.href = 'info.html'" class="nav"onmouseover="this.style = 'color: darkviolet;'" onmouseout="this.style = 'color: ghostwhite;'">info</p>
 			<p onclick="window.location.href = 'schedule.html'" class="nav"onmouseover="this.style = 'color: darkviolet;'" onmouseout="this.style = 'color: ghostwhite;'">schedule</p> 	
 			<p onclick="window.location.href = 'tipjar.html'" class="nav"onmouseover="this.style = 'color: darkviolet;'" onmouseout="this.style = 'color: ghostwhite;'">tipjar</p>
+	</div>
+	<div id="mid" class="mid">
+		<div id="column" class="column">
+		<br>
+		<h3> Feedback: </h3>
+		<p>Tips en tops zijn natuurlijk altijd welkom, als je iets hebt wat je graag zou willen delen kan je dat hier invullen. Als je een nummer hebt dat je graag zou willen horen kan je ook een suggestie doen! :)</p>
+		<input type="radio" name="visibility" id="fbt" onclick="go()" value="true">Feedback
+		<input type="radio" name="visibility" id="sst" onclick="go()" value="false">Song suggestion
+		<div>
+			<div class="fbd" id="fbd">
+				<p class="greeting">Dear 4weeks,</p>		
+				<input class="ssi" id="songname" value="songname here"></input><input class="ssi" id="artist" value="artist name here"></input>
+				<textarea class="fbi" id="feedback" rows="7">feedback hier</textarea>
+				<p class="ending">Sincerely, <input class="sender" value="anoniem"></input></p>
+				<button class="submit" onclick="//send()">Submit</button>
+			</div>
+			<script type="text/javascript">
+				var sel = document.getElementsByName("visibility");
+				var fbv = document.getElementById("fbd");
+				var fbi = document.getElementById("feedback");
+				var ssi = document.getElementById("songname");
+				var ssi2 = document.getElementById("artist");
+				function go() {
+					fbv.style = "visibility: visible;"
+					if (sel[0].checked) {
+						fbi.style.visibility = "visible";
+						ssi.style.visibility = "hidden";
+						ssi2.style.visibility = "hidden";
+					}	else {
+						fbi.style.visibility = "hidden";
+						ssi.style.visibility = "visible";
+						ssi2.style.visibility = "visible";
+					}			
+				}
+			</script>
+		</div>
+	</div>
+	<div id="bottom" class="bottom">
+		<div id="contact" class="contact">
+			<h2>contact</h2>
+			<div class="bot-col"><h4>Manager: Sil</h4><p>email: <a href="mailto:silverheijen@outlook.com">silverheijen@outlook.com</a><p>whatsapp: <a href="https://api.whatsapp.com/send?phone=0630475637">+31630475637</a></p></div> 
+			<div class="bot-col"><h4>Website: Sid</h4><p>email: <a href="mailto:voorsid@gmail.com">voorsid@gmail.com</a></p><p>whatsapp: <a href="https://api.whatsapp.com/send?phone=0639418934">+31639418934</a></p></div>
+		</div>
 	</div>
 </body>
 </html>
