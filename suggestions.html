@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -22,43 +21,22 @@
 		<div id="column" class="sugcolumn">
 		<br>
 		<h3> Feedback: </h3>
-		<p class="para">Tips en tops zijn natuurlijk altijd welkom, als je iets hebt wat je graag zou willen delen kan je dat hier invullen. Als je een nummer hebt dat je graag zou willen horen kan je ook een suggestie doen! :)</p>
-		<input type="radio" name="visibility" id="fbt" onclick="go()" value="true">Feedback
-		<input type="radio" name="visibility" id="sst" onclick="go()" value="false">Song suggestion
-		<div class="fbd" id="fbd">
-			<p class="greeting">Dear 4weeks,</p>		
-			<input class="ssi" id="songname" value="songname here"></input><input class="ssi" id="artist" value="artist name here"></input>
-			<textarea class="fbi" id="feedback" rows="7">feedback hier</textarea>
-			<p class="ending">Sincerely, <input class="sender" value="anoniem"></input></p>
-			<button class="submit" onclick="send()">Submit</button>
-		</div>
-		<script type="text/javascript">
-			var sel = document.getElementsByName("visibility");
-			var fbv = document.getElementById("fbd");
-			var fbi = document.getElementById("feedback");
-			var ssi = document.getElementById("songname");
-			var ssi2 = document.getElementById("artist");
-			function go() {
-				fbv.style = "visibility: visible;"
-				if (sel[0].checked) {
-					fbi.style.visibility = "visible";
-					ssi.style.visibility = "hidden";
-					ssi2.style.visibility = "hidden";
-				}	else {
-					fbi.style.visibility = "hidden";
-					ssi.style.visibility = "visible";
-					ssi2.style.visibility = "visible";
-				}			
-			}
-			function send() {
-				sel[0].checked = false;
-				sel[1].checked = false;
-				fbv.style = "visibility: hidden;";
-				fbi.style.visibility = "hidden";
-				ssi.style.visibility = "hidden";
-				ssi2.style.visibility = "hidden";
-			}
-		</script>		
+		<p class="para">Het idee was dat je hier een heel mooi formulier in kon vullen en op die manier ideën, suggesties en tips kon delen. Jammer genoeg is dat wegens technische beperkingen niet mogelijk, maar als één idee niet werkt moet je gewoon met een beter idee komen, en dat hebben we ook gedaan! Aanschouw, de suggestion-box 2.0! (oftewel een disqus API)</p>
+		<div id="disqus_thread"></div>
+		<script>
+		    var disqus_config = function () {
+		    this.page.url = 'https://4weeks.nl/suggestions.html';
+		    this.page.identifier = 'WeekWeekWeekWeek';
+ 		   };
+		    
+ 		   (function() { // DON'T EDIT BELOW THIS LINE
+		    var d = document, s = d.createElement('script');
+ 		   s.src = 'https://4weeks.disqus.com/embed.js';
+ 		   s.setAttribute('data-timestamp', +new Date());
+ 		   (d.head || d.body).appendChild(s);
+ 		   })();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>	
 	</div>
 	<div id="bottom" class="bottom">
 		<div id="contact" class="contact">
